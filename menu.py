@@ -2,7 +2,7 @@ from data.menu_options import menu_options
 from validations import validate_positive_int_range
 
 
-def initial_menu(students):
+def initial_menu(students, id):
     while True:
         options = menu_options()
         number_of_options = len(options)
@@ -12,7 +12,7 @@ def initial_menu(students):
 
         choice = validate_positive_int_range("Choose an option: ", number_of_options) -1
 
-        students = options[choice]["action"](students)
+        students, id = options[choice]["action"](students, id)
         
         if students == "exit":
             break
