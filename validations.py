@@ -2,7 +2,7 @@ def validate_positive_int_range(message, max_range=None):
     while True:
         try:
             number = int(input(message))
-            if 1> number > max_range:
+            if number > max_range or number < 1:
                 if max_range == None:
                     print("Invalid answer")
                 else:
