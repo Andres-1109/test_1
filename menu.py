@@ -13,6 +13,6 @@ def initial_menu(students):
         choice = validate_positive_int_range("Choose an option: ", number_of_options) -1
 
         students = options[choice]["action"](students)
-        print(students)
+        
         if students == "exit":
             break

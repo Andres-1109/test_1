@@ -18,3 +18,14 @@ def add_student(students):
     }
     students.append(new_student)
     return students
+
+def delete_student(students):
+    if students == []:
+        print("There are no students to delete")
+    else:
+        number_of_students = len(students)
+        for i, student in enumerate(students, start= 1):
+            print(f'{i} . |ID: {student["id"]}| Name: {student["name"]}| Program: {student["program"]}| Status: {student["status"]}|')
+        choice = validate_positive_int_range("Enter the number of the student to delete: ", number_of_students) -1
+        students.pop(choice)
+    return students    
