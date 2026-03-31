@@ -28,3 +28,22 @@ def validate_not_empty(message):
                 print("Please write something")
         except ValueError:
             print("Please write something")
+
+def validate_id_csv(students, id):
+    for student in students:
+        if student["id"] == id:
+            return ValueError
+    return id
+    
+def validate_name_csv(name):
+    if name != "":
+        return name
+    else:
+        return ValueError
+    
+def validate_status_csv(status):
+    if status == "Active" or status == "Inactive":
+        return status
+    else:
+        return ValueError
+
