@@ -101,3 +101,8 @@ Your choice: ''', 4)
             if counter == 0:
                 print("Status not found")
     return students, id         
+
+def exit_program(students, id):
+    print("Thanks for using the service.")
+    print("Closing the App...")
+    return "exit", None

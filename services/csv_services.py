@@ -5,7 +5,7 @@ import csv
 base = Path(__file__).parent.parent
 path = base / "data" / "students.csv"
 
-
+# This functions is used for saving the list of students in the program into a csv file
 def save_csv(students, id):
     if students == []:
         print("There are no students to save")

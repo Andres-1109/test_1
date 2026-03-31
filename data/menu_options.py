@@ -1,4 +1,4 @@
-from services.crud_services import add_student, delete_student, edit_student, show_students, search_students
+from services.crud_services import add_student, delete_student, edit_student, show_students, search_students, exit_program
 from services.csv_services import save_csv, upload_csv
 
 def menu_options():
@@ -10,5 +10,5 @@ def menu_options():
         {"option": "Search students", "action": search_students},
         {"option": "Save CSV", "action": save_csv},
         {"option": "Upload CSV", "action": upload_csv},
-        # {"option": "Exit", "action": exit_program},
+        {"option": "Exit", "action": exit_program},
     ]
