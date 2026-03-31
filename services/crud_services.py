@@ -55,7 +55,6 @@ def show_students(students, id):
 def search_students(students,id):
     if students == []:
         print("There are no students to search")
-        return students, id
     else:
         choice= validate_positive_int_range('''
 Press                                        
@@ -73,7 +72,6 @@ Your choice: ''', 4)
                     counter+=1
             if counter == 0:
                 print("ID not found")
-            return students, id
         elif choice == 2:
             data_to_search = validate_not_empty("Enter the name to search: ").lower()
             for i, student in enumerate(students, start=1):
@@ -82,7 +80,6 @@ Your choice: ''', 4)
                     counter+=1
             if counter == 0:
                 print("Name not found")
-            return students, id
         elif choice ==3:
             data_to_search = validate_not_empty("Enter the program to search: ").lower()
             for i, student in enumerate(students, start=1):
@@ -91,7 +88,6 @@ Your choice: ''', 4)
                     counter+=1
             if counter == 0:
                 print("Program not found")
-            return students, id
         else:
             data_to_search = validate_positive_int_range('Enter "1" to search active students or "2" for inactive students: ', 2)
             if data_to_search == 1:
@@ -104,5 +100,4 @@ Your choice: ''', 4)
                     counter+=1
             if counter == 0:
                 print("Status not found")
-            return students, id
-             
+    return students, id         
