@@ -74,7 +74,6 @@ Your choice: ''', 4)
             if counter == 0:
                 print("ID not found")
             return students, id
-        
         elif choice == 2:
             data_to_search = validate_not_empty("Enter the name to search: ").lower()
             for i, student in enumerate(students, start=1):
@@ -105,5 +104,5 @@ Your choice: ''', 4)
                     counter+=1
             if counter == 0:
                 print("Status not found")
-
-        
+            return students, id
+             
