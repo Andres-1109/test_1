@@ -97,7 +97,7 @@ Your choice: ''', 4)
             if data_to_search == 1:
                 data_to_search = "Active"
             else:
-                data_to_search = "Incactive"
+                data_to_search = "Inactive"
             for i, student in enumerate(students, start=1):
                 if student["status"] == data_to_search:
                     print(f'{i} . |ID: {student["id"]}| Name: {student["name"]}| Program: {student["program"]}| Status: {student["status"]}|')
